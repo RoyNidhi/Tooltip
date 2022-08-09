@@ -1,43 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    width:100vw;
-    height:100vh;
-    background:#eee;
-    font-size:30px;
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #eee;
+    font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
 }
-div{
-    width:auto;
-    height:auto;
+
+div {
+    width: auto;
+    height: auto;
     position: relative;
+    cursor: pointer;
 }
-div::after{
-    content: "Reprehenderit incidunt optio provident aliquam est nulla.";
+
+div::before,
+div::after {
+    content: " ";
     display: block;
-    width:250px;
-    font-size:14px;
-    color:#fff;
-    background:rgba(0,0,0,.5);
-    padding:15px 15px;
-    /* text-align: left; */
-    position:absolute;
-    top:-30%;
-    left:130%;
-    border-radius: 5px;
-    opacity:0;
-    visibility: hidden;
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
     transition: all 1s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease-in-out;
 }
-div:hover::after{
-    opacity:1;
+
+div::before {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgba(0, 0, 0, .5);
+    top: 20%;
+    left: 92%;
+    margin-left: 10px;
+}
+
+div::after {
+    content: "Reprehenderit incidunt optio provident aliquam est nulla.";
+    width: 200px;
+    font-size: 14px;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    padding: 15px 15px;
+    top: -40%;
+    left: 160%;
+    border-radius: 5px;
+}
+
+div:hover::after,
+div:hover::before {
+    opacity: 1;
     visibility: visible;
 }
