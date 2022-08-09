@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background:#eee;
+    font-size:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+div{
+    width:auto;
+    height:auto;
+    position: relative;
+}
+div::after{
+    content: "Reprehenderit incidunt optio provident aliquam est nulla voluptas.";
+    display: block;
+    width:200px;
+    font-size:14px;
+    color:#fff;
+    background:rgba(0,0,0,.5);
+    padding:15px 15px;
+    /* text-align: left; */
+    position:absolute;
+    top:-45%;
+    left:130%;
+    border-radius: 5px;
+    opacity:0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+}
+div:hover::after{
+    opacity:1;
+    visibility: visible;
+}
