@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     width: 100vw;
     height: 100vh;
@@ -16,14 +15,12 @@ body {
     justify-content: center;
     font-family: 'Poppins', sans-serif;
 }
-
 div {
     width: auto;
     height: auto;
     position: relative;
     cursor: pointer;
 }
-
 div::before,
 div::after {
     content: " ";
@@ -36,7 +33,6 @@ div::after {
     visibility: hidden;
     transition: all 0.8s ease-in-out;
 }
-
 div::before {
     width: 0;
     height: 0;
@@ -47,7 +43,6 @@ div::before {
     left: 92%;
     margin-left: 10px;
 }
-
 div::after {
     content: "Reprehenderit incidunt optio provident aliquam est nulla.";
     width: 200px;
@@ -59,7 +54,6 @@ div::after {
     left: 160%;
     border-radius: 5px;
 }
-
 div:hover::after,
 div:hover::before {
     opacity: 1;
