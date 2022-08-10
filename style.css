@@ -57,7 +57,7 @@ div::after {
     padding: 15px 15px;
     top: -40%;
     left: 160%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 div:hover::after,
